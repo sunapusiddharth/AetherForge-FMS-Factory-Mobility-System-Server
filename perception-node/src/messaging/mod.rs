@@ -298,6 +298,18 @@ impl MessagePublisher for ZmqPublisher {
     fn is_connected(&self) -> bool {
         self.socket.is_some()
     }
+    
+    async fn publish_fusion_result(&self, result: &FusionResult) -> Result<()> {
+        todo!()
+    }
+    
+    async fn publish_system_health(&self, health: &SystemHealth) -> Result<()> {
+        todo!()
+    }
+    
+    async fn publish_alert(&self, alert: &SystemAlert) -> Result<()> {
+        todo!()
+    }
 }
 
 // Support for other protocols (Redis, Kafka, MQTT) would be implemented similarly
